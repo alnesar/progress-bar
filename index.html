@@ -1,0 +1,24 @@
+<html>
+<head>
+<style>
+body{background-color:#f6f6f6}
+.a{width:200px;height:30px;background-color:#fff;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;border-bottom:solid 3px #d0d0d0}
+.b{width:0px;height:30px;background-color:#48c7e7;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;border-bottom:solid 3px #27a8c8}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  var value=$(".b").attr("value");
+  $('.b').animate({width:value+'%'});
+   if (value > 50) {$('.b').css("background-color","#008200");$('.b').css("border-color","#004400");}
+   if (value < 49 & value > 30) {$('.b').css("background-color","#e8e500");$('.b').css("border-color","#c3c100");}
+   if (value < 29) {$('.b').css("background-color","#d7112d");$('.b').css("border-color","#b30019");}
+});
+</script>
+  </head>
+  <body>
+  <div class="a">
+    <div class="b" value="70"></div>
+  </div>
+</body>
+</html>
