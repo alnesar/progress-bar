@@ -10,15 +10,15 @@ body{background-color:#f6f6f6}
 $(document).ready(function(){
   var value=$(".b").attr("value");
   $('.b').animate({width:value+'%'});
-   if (value > 50) {$('.b').css("background-color","#008200");$('.b').css("border-color","#004400");}
-   if (value < 49 & value > 30) {$('.b').css("background-color","#e8e500");$('.b').css("border-color","#c3c100");}
-   if (value < 29) {$('.b').css("background-color","#d7112d");$('.b').css("border-color","#b30019");}
+   if (value >= 50) {$('.b').css("background-color","#008200");$('.b').css("border-color","#004400");}
+   if (value < 50 & value > 30) {$('.b').css("background-color","#e8e500");$('.b').css("border-color","#c3c100");}
+   if (value <= 30) {$('.b').css("background-color","#d7112d");$('.b').css("border-color","#b30019");}
 });
 </script>
   </head>
   <body>
   <div class="a">
-    <div class="b" value="70"></div>
+    <div class="b" value="100"></div>
   </div>
 </body>
 </html>
